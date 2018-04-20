@@ -1,11 +1,14 @@
 body{
     margin: 0 0;
+    padding: 0 0;
 }
 a{
     color: black;
     text-decoration: none;
 }
-
+li{
+    list-style: none;
+}
 
 /* 1*/
 #headerone{
@@ -98,12 +101,66 @@ ul{
     padding: 0 0;
 }
 /*4*/
+#scroll{
+    height: 437px;
+    position: relative;
+    background-color: rgb(238, 226, 175);
+}
 img{
     vertical-align: top;
 }
-#box{
+#container{
+    height: 437px;
     overflow: hidden;
     position: relative;
+
+}
+#container ul{
+    width: 500%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#container ul li{
+    float: left;
+}
+#buttons{
+    position: absolute;
+    z-index: 2;
+    height: 10px;
+    width: 100px;
+    top: 400px;
+    left: 550px;
+}
+#buttons span{
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 20px;
+    border: solid 1px black;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.arrow{
+    height: 200px;
+    width: 100px;
+    overflow: hidden;
+    background-image: url(../images/prev-next.png);
+    position: absolute;
+    cursor: pointer;
+}
+#prev{
+    top: 100px;
+    left: 50px;
+    background-position: 0 0;
+}
+#next{
+    top: 100px;
+    right: 50px;
+    background-position: -100px 0px;
+}
+.on{
+    background-color: pink;
 }
 /*5*/
 #one{
