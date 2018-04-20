@@ -59,6 +59,16 @@ window.onload = function(){
     }
     play();
 
+    for(var i = 0;i<buttons.length;i++){
+        buttons[i].onclick = function(){
+            var clickIndex = parseInt(this.getAttribute("index"));
+            var offset = 1100 * (index - clickIndex);
+            animate(offset);
+            index = clickIndex;
+            buttonsShow();
+        }
+    }
+
     var scroll = document.getElementById("scroll");
     function stop(){
         clearInterval(timer);
