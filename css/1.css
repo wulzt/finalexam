@@ -1,11 +1,7 @@
-@font-face{
-    font-family: "YaHei";
-    src: url("../font/YaHei.ttf");
-}
 body{
     margin: 0 0;
     padding: 0 0;
-    font-family: YaHei;
+    font-family: "Microsoft YaHei";
 }
 a{
     color: black;
@@ -319,4 +315,47 @@ h1 + p{
     height: 150px;
     width: 200px;
     margin: 10px;
+    background-image: url(../images/4.png);
+    background-repeat: no-repeat;
+    background-size: 350%;
+    border-radius: 5px;
+}
+#build .inner >p{
+    font-size: 20px;
+}
+#function_1{
+    background-color: rgb(82,178,227);
+    background-position: 70px 25px;
+}
+#function_2{
+    background-color:rgb(171,100,145);
+    background-position: -140px 25px;
+}
+#function_3{
+    background-color:rgb(130,207,54);
+    background-position: -350px 25px;
+}
+#function_4{
+    background-color:rgb(43,192,167);
+    background-position: -565px 25px;
+}
+#function_5{
+    background-color:rgb(73,203,126);
+    background-position: 70px -220px;
+}
+#function_6{
+    background-color:rgb(134,138,232);
+    background-position: -140px -220px;
+}
+#function_7{
+    background-color:rgb(249,122,116);
+    background-position: -350px -220px;
+}
+#function_8{
+    background-color:rgb(47,154,229);
+    background-position: -565px -220px;
+}
+.function p{
+    color: white;
+    padding-top: 100px;
 }
