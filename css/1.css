@@ -1,6 +1,11 @@
+@font-face{
+    font-family: "YaHei";
+    src: url("../font/YaHei.ttf");
+}
 body{
     margin: 0 0;
     padding: 0 0;
+    font-family: YaHei;
 }
 a{
     color: black;
@@ -10,7 +15,7 @@ li{
     list-style: none;
 }
 
-/* 1*/
+/* 1111111111111111111111111111111111111111111111111111111*/
 #headerone{
     background-color: rgb(233, 233, 233);
     padding: 7px 0;
@@ -29,7 +34,7 @@ li{
 #headerone-right{
     float: right;
 }
-/*2-1*/
+/*2-1111111111111111111111111111111111111111111111111111111*/
 #headertwo{
     background-color: white;
 
@@ -73,7 +78,7 @@ li{
     padding-left: 10px;
     font-size: 15px;
 }
-/*2-2*/
+/*2-22222222222222222222222222222222222222222222222222222*/
 #headertwo-right{
     float: right;
 }
@@ -86,7 +91,7 @@ li{
     font-size: 18px;
 }
 
-/*3*/
+/*3333333333333333333333333333333333333333333333333333333333*/
 nav li{
     list-style-type: none;
     float: left;
@@ -100,7 +105,7 @@ ul{
     margin: 0 0;
     padding: 0 0;
 }
-/*4*/
+/*44444444444444444444444444444444444444444444444444444444444*/
 #scroll{
     height: 437px;
     position: relative;
@@ -162,13 +167,156 @@ img{
 .on{
     background-color: pink;
 }
-/*5*/
-#one{
-/*    background: radial-gradient(circle,rgb(101, 112, 122),rgb(20, 36, 52));*/
-    height: 660px;
+/*5555555555555555555555555555555555555555555555555555555*/
+#item{
+    background: radial-gradient(circle,rgb(101, 112, 122),rgb(20, 36, 52));
     background-color: rgb(20, 36, 52);
 }
-#one .inner{
-    background: radial-gradient(circle,rgb(101, 112, 122),rgb(20, 36, 52) 70%,rgb(20, 36, 52) 30%);
+#item .inner{
+    height: 680px;
+    text-align: center;
+}
+ .title{
+    position: relative;
+} 
+.title h1{
+    font-size: 48px;
+    letter-spacing: 2px;
+    border-right: solid 10px rgb(244, 152, 0);
+    display: inline-block;
+    padding-right: 12px;
+    color: rgb(244, 152, 0);
+}
+.title p{
+    display: inline-block;
+}
+#item .title p{
+    color: white;
+}
+h1 + p{
+    font-size: 30px;
+    padding: 5px 0 0 5px;
+    position: absolute;
+    top: -7px;
+}
+.title p + p{
+    position: relative;
+    left: 7px;
+    top: 10px;
+}
+#bulb{
+    position: relative;
+}
+#circle{
+    width: 300px;
+    height: 300px;
+    background-image: url(../images/circle.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 120px;
+    left: 400px;   
+}
+#circle>div{
+    width: 129px;
+    height: 129px;
+    position: absolute;
+    top: 95px;
+    left: 90px;
+}
+.littleBox{
+    display: inline-block;
+    background-color: white;
+    height: 37px;
+    width: 37px;
+    float: left;
+    margin: 3px;
+    border-radius: 6px;
+    background-image: url(../images/littlebox.png);
+    background-repeat: no-repeat;
+}
+#store{
+    background-position: -64px -12px;
+    position: relative;
+    top: -8px;
+    left: 5px;
+    transform: rotateZ(-25deg);
+}
+#set{
+    background-position: -114px -10px;
+    position: relative;
+    top: -12px;
+    left: 14px;
+}
+#train{
+    background-position: -10px -65px;
+}
+#push{
+    background-position: -58px -68px;
+}
+#push + div{
+    transform: rotateZ(30deg);
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+#public{
+    background-position: -56px -113px;
+}
+#design{
+    background-position: -105px -113px;
+}
+#circle h3{
+    color: rgb(244, 152, 0);
+    position: absolute;
+    top: 226px;
+    left: 118px;
+}
+#bulb-bottom div:first-child{
+    width: 105px;
+    height: 70px;
+    background-color: rgb(244, 152, 0);
+    position: relative;
+    top: 105px;
+    left: 500px;
+    border-radius: 8px;
+}
+#bulb-bottom div:first-child + div{
+    width: 77px;
+    height: 24px;
+    background-color: rgb(244, 152, 0);
+    border-radius: 5px;
+    position: relative;
+    top: 110px;
+    left: 514px;
+}
+#halfcircle{
+    width: 30px;
+    height: 15px;
+    background-color: rgb(46, 182, 109);
+    position: relative;
+    top: 115px;
+    left: 538px;
+    border-radius: 0 0 15px 15px;
+}
+
+/*666666666666666666666666666666666666666*/
+#build{
     height: 660px;
+}
+#build .inner{
+    text-align: center;
+}
+#build h1{
+    color: black;
+}
+.boxx{
+    height: 180px;
+    text-align: center;
+}
+.function{
+    display: inline-block;
+    background-color: pink;
+    height: 150px;
+    width: 200px;
+    margin: 10px;
 }
