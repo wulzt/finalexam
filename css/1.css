@@ -7,21 +7,42 @@ a{
     color: black;
     text-decoration: none;
 }
-li{
-    list-style: none;
+.inner{
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
 }
-
+/*后面各个板块的标题*/
+.title{
+    position: relative;
+} 
+.title h1{
+    font-size: 40px;
+    letter-spacing: 1px;
+    border-right: solid 10px rgb(244, 152, 0);
+    display: inline-block;
+    padding-right: 10px;
+    color: rgb(244, 152, 0);
+}
+.title p{
+    display: inline-block;
+}
+h1 + p{
+    font-size: 26px;
+    padding: 5px 0 0 5px;
+    position: absolute;
+    top: -7px;
+}
+.title p + p{
+    position: relative;
+    left: 7px;
+    top: 10px;
+}
 /* 1111111111111111111111111111111111111111111111111111111*/
 #headerone{
     background-color: rgb(233, 233, 233);
     padding: 7px 0;
     font-size: 12px;
-}
-
-.inner{
-    width: 1100px;
-    margin: 0 auto;
-    overflow: hidden;
 }
 #headerone-left{
     float: left;
@@ -29,6 +50,50 @@ li{
 }
 #headerone-right{
     float: right;
+}
+/*登登登登登登登登登登登登登登登登录录录录录录录录录录录录录录录*/
+#mask{
+    background-color:#000;
+    opacity: 0.5;
+    z-index: 9998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#login{
+    position: fixed;
+    margin: auto auto;
+    width: 400px;
+    height: 170px;
+    z-index: 9999;
+    background-color: #fff;
+    border: solid 2px grey;
+    border-radius: 15px;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: none;
+}
+form{
+    display: table;
+    padding: 0 10px;
+    
+}
+.tableRow{
+    display: table-row;
+}
+div.tableRow label{
+    display: table-cell;
+    text-align: right;
+    padding: 0 20px 15px 50px;
+}
+#btn{
+    margin: 5px 0;
+    position: relative;
+    left: 132px; 
 }
 /*2-1111111111111111111111111111111111111111111111111111111*/
 #headertwo{
@@ -124,6 +189,7 @@ img{
 }
 #container ul li{
     float: left;
+    list-style: none;
 }
 #buttons{
     position: absolute;
@@ -172,33 +238,8 @@ img{
     height: 680px;
     text-align: center;
 }
- .title{
-    position: relative;
-} 
-.title h1{
-    font-size: 48px;
-    letter-spacing: 2px;
-    border-right: solid 10px rgb(244, 152, 0);
-    display: inline-block;
-    padding-right: 12px;
-    color: rgb(244, 152, 0);
-}
-.title p{
-    display: inline-block;
-}
 #item .title p{
     color: white;
-}
-h1 + p{
-    font-size: 30px;
-    padding: 5px 0 0 5px;
-    position: absolute;
-    top: -7px;
-}
-.title p + p{
-    position: relative;
-    left: 7px;
-    top: 10px;
 }
 #bulb{
     position: relative;
@@ -220,7 +261,6 @@ h1 + p{
     left: 90px;
 }
 .littleBox{
-    display: inline-block;
     background-color: white;
     height: 37px;
     width: 37px;
@@ -311,7 +351,6 @@ h1 + p{
 }
 .function{
     display: inline-block;
-    background-color: pink;
     height: 150px;
     width: 200px;
     margin: 10px;
@@ -359,3 +398,201 @@ h1 + p{
     color: white;
     padding-top: 100px;
 }
+/*777777777777777777777777777777777777777777*/
+#market{
+    background-color: rgb(20, 36, 52);
+}
+#market .inner{
+    text-align: center;
+    height: 350px;
+}
+#market .inner p{
+    color: white;
+}
+.circle-border{
+    height: 110px;
+    width: 110px;
+    border: solid 2px rgb(0, 246, 247);
+    border-radius: 50%;
+    background-image: url(../images/5.png);
+    background-repeat: no-repeat;
+    background-size: 420%;
+}
+#content{
+    margin-top: 34px;
+}
+#content div{
+    display: inline-block;
+}
+.line{
+    width: 105px;
+    height: 2px;
+    margin: 0 -4px;
+    background-color: rgb(0,246,247);
+    position: relative;
+    top: -90px;
+}
+.circle-border + p{
+    font-size: 14px;
+}
+#circle-border_1{
+    background-position: 26px 29px;
+}
+#circle-border_2{
+    background-position: -176px 29px;
+}
+#circle-border_3{
+    background-position: -382px 29px;
+}
+/*88888888888888888888888888888888888888888888*/
+#optimize{
+    background-color: rgb(209,56,100);
+}
+#optimize .inner{
+    height: 350px;
+}
+#optimize h1{
+    color: white;
+    padding-left: 130px;
+}
+#optimize h1 + div{
+    height: 230px;
+    margin-left: 130px;
+}
+#optimize h1 + div>div{
+    height: 230px;
+    width: 400px;
+    border-radius: 5px;
+    float: left;
+    background-size: 100%;
+}
+#adv1{
+    background-image: url(../images/adv1.jpg);
+}
+#adv2{
+    background-image: url(../images/adv2.jpg);
+    margin-left: 15px;
+}
+#adv2 div{
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 195px;
+
+}
+#adv2 p{
+    color: white;
+    font-size: 14px;
+    padding: 0 0 0 15px;
+    margin: auto 0;
+    position: absolute;
+}
+p>span{
+    font-size: 22px;
+}
+/*99999999999999999999999999999999999999999999999*/
+#promotion{
+    height: 556px;
+    position: relative;
+}
+#promotion h1{
+    padding-left: 130px;
+    margin: 37px 0;
+}
+#showWhite{
+    height: 292px;
+}
+#showGrey{
+    height: 264px;
+    background-color: rgb(220,220,220);
+}
+#promotion .inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 556px;
+}
+#push{  
+    overflow: hidden;/*让父元素包含浮动的子元素*/
+    color: white;
+}
+.push{
+    height: 340px;
+    width: 266px;
+    float: left;
+    margin: 10px;
+    border: solid 1px rgb(8,144,216);
+    border-radius: 8px;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+#push_1{
+    margin-left: 125px;
+    background-color: rgb(244,152,0);
+}
+#push_2{
+    background-color: rgb(42,196,113);
+}
+#push_3{
+    background-color: rgb(244, 152, 0);
+}
+.push div{
+    height: 106px;
+    background-repeat: no-repeat;
+}
+#push_1 > div{
+    background-image: url(../images/cctv.jpg);
+    background-size: 120%;
+    background-position: -30px -23px;
+}
+#push_2 > div{
+    background-image: url(../images/tencent.jpg);
+    background-size: 100%;
+    background-position: 0 -93px;
+}
+#push_3 > div{
+    background-image: url(../images/pyq.jpg);
+    background-size: 110%;
+    background-position: 0 -15px;
+}
+.push h2{
+    font-size: 26px;
+    margin: 0 50px;
+    padding: 25px 0;
+}
+.push h2 + p{
+    padding: 0 0px;
+    margin: 0 45px;
+    border-top: solid 1px white;
+    padding-top: 20px;
+    text-align: left;
+}
+#push_2 p{
+    margin: 0 27px;
+}
+#push_3 p{
+    margin: 0 53px;
+}
+/*10000000000000000000000000000000000000000000000000*/
+#feature .inner{
+    text-align: center;
+    height: 340px;
+}
+#feature h1{
+    color: black;
+}
+#corporate-image div{
+    height: 187px;
+    width: 170px;
+    overflow: hidden;
+    margin: 15px 10px;
+    display: inline-block;
+    background-color: pink;
+    border-radius: 4px;
+}
+div#kingtrain{
+    width: 320px;
+}
+
