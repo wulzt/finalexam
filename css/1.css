@@ -12,7 +12,7 @@ a{
     margin: 0 auto;
     overflow: hidden;
 }
-/*后面各个板块的标题*/
+/*后后面各个板块的标题*/
 .title{
     position: relative;
 } 
@@ -38,7 +38,7 @@ h1 + p{
     left: 7px;
     top: 10px;
 }
-/* 1111111111111111111111111111111111111111111111111111111*/
+/* headerone*/
 #headerone{
     background-color: rgb(233, 233, 233);
     padding: 7px 0;
@@ -95,7 +95,7 @@ div.tableRow label{
     position: relative;
     left: 132px; 
 }
-/*2-1111111111111111111111111111111111111111111111111111111*/
+/*headertwo-left*/
 #headertwo{
     background-color: white;
 
@@ -139,7 +139,7 @@ div.tableRow label{
     padding-left: 10px;
     font-size: 15px;
 }
-/*2-22222222222222222222222222222222222222222222222222222*/
+/*headertwo-right*/
 #headertwo-right{
     float: right;
 }
@@ -152,7 +152,7 @@ div.tableRow label{
     font-size: 18px;
 }
 
-/*3333333333333333333333333333333333333333333333333333333333*/
+/*nav导导导导导导导导导导导导导导导导航*/
 nav li{
     list-style-type: none;
     float: left;
@@ -166,7 +166,7 @@ ul{
     margin: 0 0;
     padding: 0 0;
 }
-/*44444444444444444444444444444444444444444444444444444444444*/
+/*scroll轮轮轮轮轮轮轮轮轮轮轮轮轮轮播图*/
 #scroll{
     height: 437px;
     position: relative;
@@ -229,7 +229,7 @@ img{
 .on{
     background-color: pink;
 }
-/*5555555555555555555555555555555555555555555555555555555*/
+/*服服服服服服服服服服服服服服务项目*/
 #item{
     background: radial-gradient(circle,rgb(101, 112, 122),rgb(20, 36, 52));
     background-color: rgb(20, 36, 52);
@@ -335,7 +335,7 @@ img{
     border-radius: 0 0 15px 15px;
 }
 
-/*666666666666666666666666666666666666666*/
+/*平平平平平平平平平平平平平平平平台搭建*/
 #build{
     height: 660px;
 }
@@ -398,7 +398,7 @@ img{
     color: white;
     padding-top: 100px;
 }
-/*777777777777777777777777777777777777777777*/
+/*全全全全全全全全全全全全全全全全网营销*/
 #market{
     background-color: rgb(20, 36, 52);
 }
@@ -444,7 +444,7 @@ img{
 #circle-border_3{
     background-position: -382px 29px;
 }
-/*88888888888888888888888888888888888888888888*/
+/*网网网网网网网网网网网网网网站优化*/
 #optimize{
     background-color: rgb(209,56,100);
 }
@@ -473,14 +473,21 @@ img{
     background-image: url(../images/adv2.jpg);
     margin-left: 15px;
 }
-#adv2 div{
+.adv div{
     height: 35px;
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     top: 195px;
-
+    display: none
 }
-#adv2 p{
+.adv:hover{
+    cursor: pointer;
+}
+.adv:hover >div{
+    display: block;
+    cursor: pointer;
+}
+.adv p{
     color: white;
     font-size: 14px;
     padding: 0 0 0 15px;
@@ -490,7 +497,7 @@ img{
 p>span{
     font-size: 22px;
 }
-/*99999999999999999999999999999999999999999999999*/
+/*品品品品品品品品品品品品品品牌推广*/
 #promotion{
     height: 556px;
     position: relative;
@@ -575,7 +582,7 @@ p>span{
 #push_3 p{
     margin: 0 53px;
 }
-/*10000000000000000000000000000000000000000000000000*/
+/*特特特特特特特特特特特特特特特特色服务*/
 #feature .inner{
     text-align: center;
     height: 340px;
@@ -583,16 +590,81 @@ p>span{
 #feature h1{
     color: black;
 }
-#corporate-image div{
+div.showBlack{
     height: 187px;
     width: 170px;
     overflow: hidden;
     margin: 15px 10px;
     display: inline-block;
-    background-color: pink;
     border-radius: 4px;
+    background-image: url(../images/feature.png);
+    background-repeat: no-repeat;
+    background-size: 250%;
 }
-div#kingtrain{
+#feature h3{
+    margin-top: 110px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+}
+#feature h3 + p{
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 0 14px;
+    color: white;
+}
+#showPurple{
+    background-color: rgb(134,138,232);
+    background-position: 55px 25px;
+}
+#showPink{
+    background-color: rgb(249,122,116);
+    background-position: -128px 25px;
+}
+#showGrape{
+    background-color: rgb(171,100,145);
+    background-position: -312px 25px;
+}
+div.showBlack:hover{
+    background-image: url(../images/featureHover.png);
+}
+#corporateImage .showBlack:hover h3{
+    color: black;
+}
+#corporateImage .showBlack:hover p{
+    color: black;
+}
+div#kingTrain{
     width: 320px;
+    height: 187px;
+    margin: 15px 10px;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
 }
-
+#kingTrain p{
+    margin: 0;
+}
+#kingTrain ol{
+    font-size: 12px;
+    line-height: 2em;
+    padding-left: 15px;;
+}
+#apply{
+    height: 35px;
+    width: 140px;
+    color: white;
+    background-color: rgb(244,152,0);
+    border-radius: 5px;
+    text-align: center;
+}
+#apply p{
+    padding-top: 5px;
+}
+#apply:hover {
+    background-color: rgb(43,181,110);
+    cursor: pointer;
+}
+#merit{
+    text-align: center;
+}
