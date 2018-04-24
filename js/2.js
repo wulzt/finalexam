@@ -1,12 +1,6 @@
-// function getId(id){
-//     e = document.getElementById("id")
-//     return (e);
-// }
-window.onload = function(){
-    // var list = getId(ul);
-    // var prev = getId(prev);
-    // var next = getId(next);
+//轮播图
 
+window.onload = function(){
     var list = document.getElementById("ul");
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
@@ -26,6 +20,7 @@ window.onload = function(){
     var index = 1;
 
     function buttonsShow(){
+        //清除on
         for(var i = 0;i < buttons.length;i++){
             if(buttons[i].className == "on"){
                 buttons[i].className = " ";
@@ -76,4 +71,15 @@ window.onload = function(){
     scroll.onmouseover = stop;
     scroll.onmouseout = play;
 
+
+
+}
+// //登录
+function open(){
+    document.getElementById("mask").style.display = "block";
+    document.getElementById("login").style.display = "block";
+}
+function close(){
+    document.getElementById("mask").style.display = "none";
+    document.getElementById("login").style.display = "none";
 }

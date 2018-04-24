@@ -51,21 +51,26 @@ h1 + p{
 #headerone-right{
     float: right;
 }
+#headerone-right span{
+    cursor: pointer;
+}
 /*登登登登登登登登登登登登登登登登录录录录录录录录录录录录录录录*/
 #mask{
     background-color:#000;
     opacity: 0.5;
     z-index: 9998;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: none;
+    width: 100%;
+    height: 100%;
 }
 #login{
     position: fixed;
     margin: auto auto;
-    width: 400px;
-    height: 170px;
+    width: 1000px;
+    height: 437px;
     z-index: 9999;
     background-color: #fff;
     border: solid 2px grey;
@@ -76,24 +81,50 @@ h1 + p{
     bottom: 0;
     text-align: center;
     display: none;
+    background-color: rgb(21,37,53);
 }
-form{
-    display: table;
-    padding: 0 10px;
-    
+#hi{
+    background-color: rgb(244,152,0);
+    height: 55px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px 10px 0 0;
 }
-.tableRow{
-    display: table-row;
+#hi>h3{
+    color: white;
+    font-size: 24px;
+    margin-top: 12px;
 }
-div.tableRow label{
-    display: table-cell;
-    text-align: right;
-    padding: 0 20px 15px 50px;
+.close>a{
+    position: absolute;
+    top: -7px;
+    right:10px;
+    font-size: 48px;
+    color: white;
+}
+input{
+    height: 55px;
+    width: 570px;
+    margin:50px 0;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 30px;
+    color: black;
+}
+#username{
+    margin: 55px 0 20px 0;
+}
+#password{
+    margin: 20px 0 0 0;
 }
 #btn{
-    margin: 5px 0;
-    position: relative;
-    left: 132px; 
+    height: 45px;
+    width: 170px;
+    margin-top: 70px;
+    background-color: rgb(244,152,0);
+    border: 0;
+    border-radius: 5px;
+    color: white;
 }
 /*headertwo-left*/
 #headertwo{

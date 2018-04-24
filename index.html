@@ -15,8 +15,8 @@
                     <a href="#"><span style="margin:0 10px;">关注微信</span></a>
                 </span>
                 <span id="headerone-right">
-                    <a href="#">注册</a>
-                    <a href="#">登录</a>
+                    <a href="#" style="margin: 0 15px;">注册</a>
+                    <a href="javascript:void(0);" onclick="window.open()">登录</a>
                 </span>
             </div>
         </div>
@@ -41,16 +41,17 @@
     <!--登录框-->
     <div id="mask"></div>
     <div id="login">
-        <h3>登录</h3>
+        <div id="hi">
+            <h3>Hello!&nbsp;&nbsp;欢迎光临</h3>
+            <div class="close"><a href="javascript:void(0);" onclick="window.close()">×</a></div>
+        </div>
         <div class="loginCon">
             <form>
-                <div id="uname" class="tableRow">
-                <label>用户名</label>
-                <input type="text" name="username" id="username" placeholder="请使用邮箱或手机号登录">
+                <div id="uname">
+                <input type="text" name="username" id="username" placeholder="用户名">
                 </div>
-                <div id="pwd" class="tableRow">
-                <label>密码</label>
-                <input type="password" name="password" id="password" placeholder="请输入密码">
+                <div id="pwd">
+                <input type="password" name="password" id="password" placeholder="密码">
                 </div>
                 <button type="submit" id="btn">登录</button>
             </form>
