@@ -4,6 +4,10 @@ window.onload = function(){
     var list = document.getElementById("ul");
     var prev = document.getElementById("prev");
     var next = document.getElementById("next");
+    var buttons = document.getElementById("buttons").getElementsByTagName("span");
+    var index = 1;
+    var timer;  
+    var scroll = document.getElementById("scroll");
     //算移动距离
     function animate(offset){
         var newLeft = parseInt(list.style.left) + offset;
@@ -15,10 +19,7 @@ window.onload = function(){
             list.style.left = -3300 + "px";
         }
     }
-    //prev next buttons
-    var buttons = document.getElementById("buttons").getElementsByTagName("span");
-    var index = 1;
-
+    
     function buttonsShow(){
         //清除on
         for(var i = 0;i < buttons.length;i++){
@@ -46,13 +47,12 @@ window.onload = function(){
         animate(-1100);
     }
     //定时器 2.5s循环播放
-    var timer;
     function play(){
         timer = setInterval(function(){
             next.onclick()
         },2500)
     }
-    play();
+
 
     for(var i = 0;i<buttons.length;i++){
         buttons[i].onclick = function(){
@@ -64,14 +64,28 @@ window.onload = function(){
         }
     }
 
-    var scroll = document.getElementById("scroll");
     function stop(){
         clearInterval(timer);
     }
     scroll.onmouseover = stop;
     scroll.onmouseout = play;
 
+    play();
 
+    //画圆弧
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+
+    // cxt.strokeStyle='black';
+    cxt.beginPath();
+    cxt.arc(150,150,150,0.33*Math.PI,0.66*Math.PI,true);
+    cxt.lineTo(90,260);
+    cxt.arc(150,150,120,0.66*Math.PI,0.33*Math.PI);
+    cxt.lineTo(215,260);
+    cxt.closePath();
+    cxt.fillStyle= "rgb(244,152,0)";
+    cxt.fill();
+    // cxt.stroke();
 
 }
 // //登录
@@ -82,4 +96,15 @@ function open(){
 function close(){
     document.getElementById("mask").style.display = "none";
     document.getElementById("login").style.display = "none";
+}
+
+
+function login(){
+    var username = document.getElementById("username");
+    if(username.value){
+        alert(username.value);  
+        var r = document.getElementById("headerone-right");
+        var child = document.getElementById("signUp");
+        var e = r.removeChild(child);
+    }
 }

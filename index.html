@@ -15,7 +15,7 @@
                     <a href="#"><span style="margin:0 10px;">关注微信</span></a>
                 </span>
                 <span id="headerone-right">
-                    <a href="#" style="margin: 0 15px;">注册</a>
+                    <a href="#" id="signUp" style="margin: 0 15px;">注册</a>
                     <a href="javascript:void(0);" onclick="window.open()">登录</a>
                 </span>
             </div>
@@ -53,7 +53,7 @@
                 <div id="pwd">
                 <input type="password" name="password" id="password" placeholder="密码">
                 </div>
-                <button type="submit" id="btn">登录</button>
+                <button type="submit" id="btn" onclick="login()">登录</button>
             </form>
         </div>
     </div>
@@ -97,6 +97,9 @@
             </div>
             <div id="bulb">
                 <div id="circle">
+                    <canvas id="myCanvas" width="300" height="300">
+                    Your browser does not support the canvas element.
+                    </canvas>
                     <div>
                         <div class="littleBox"></div>
                         <div class="littleBox" id="store"></div>
@@ -241,8 +244,8 @@
             </div>
         </div>
     </div>
-    <div id="merit">
-        <div class="title">
+    <div id="merit"><!--服务优势-->
+        <div class="title" id="meritTitle">
             <h1>MERIT</h1>
             <p>服务优势</p>
             <p>用最小的成本，为客户创造最大价值！</p>

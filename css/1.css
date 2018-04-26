@@ -1,14 +1,14 @@
 body{
     margin: 0 0;
     padding: 0 0;
-    font-family: "Microsoft YaHei";
+    /* font-family: "Microsoft YaHei"; */
 }
 a{
     color: black;
     text-decoration: none;
 }
 .inner{
-    width: 1100px;
+    width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -17,7 +17,7 @@ a{
     position: relative;
 } 
 .title h1{
-    font-size: 40px;
+    font-size: 48px;
     letter-spacing: 1px;
     border-right: solid 10px rgb(244, 152, 0);
     display: inline-block;
@@ -28,7 +28,7 @@ a{
     display: inline-block;
 }
 h1 + p{
-    font-size: 26px;
+    font-size: 30px;
     padding: 5px 0 0 5px;
     position: absolute;
     top: -7px;
@@ -37,19 +37,22 @@ h1 + p{
     position: relative;
     left: 7px;
     top: 10px;
+    font-size: 18px;
 }
 /* headerone*/
 #headerone{
     background-color: rgb(233, 233, 233);
-    padding: 7px 0;
+    padding: 12px 0;
     font-size: 12px;
 }
+
 #headerone-left{
     float: left;
-
+    padding-left: 20px;
 }
 #headerone-right{
     float: right;
+    padding-right: 20px;
 }
 #headerone-right span{
     cursor: pointer;
@@ -69,11 +72,11 @@ h1 + p{
 #login{
     position: fixed;
     margin: auto auto;
-    width: 1000px;
-    height: 437px;
+    width: 1078px;
+    height: 518px;
     z-index: 9999;
     background-color: #fff;
-    border: solid 2px grey;
+    border: solid 2px rgb(46,182,109);
     border-radius: 15px;
     top: 0;
     left:0;
@@ -85,14 +88,14 @@ h1 + p{
 }
 #hi{
     background-color: rgb(244,152,0);
-    height: 55px;
+    height: 70px;
     width: 100%;
     display: inline-block;
     border-radius: 10px 10px 0 0;
 }
 #hi>h3{
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 12px;
 }
 .close>a{
@@ -103,43 +106,42 @@ h1 + p{
     color: white;
 }
 input{
-    height: 55px;
-    width: 570px;
+    height: 69px;
+    width: 661px;
     margin:50px 0;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 30px;
     padding-left: 30px;
     color: black;
 }
 #username{
-    margin: 55px 0 20px 0;
+    margin: 67px 0 0 0;
 }
 #password{
-    margin: 20px 0 0 0;
+    margin: 50px 0 0 0;
 }
 #btn{
     height: 45px;
     width: 170px;
-    margin-top: 70px;
+    margin-top: 90px;
     background-color: rgb(244,152,0);
     border: 0;
     border-radius: 5px;
     color: white;
+    font-size: 18px;
 }
 /*headertwo-left*/
 #headertwo{
     background-color: white;
-
+    height: 120px;
 }
 #headertwo .inner{
     padding: 24px 0;
 }
 #headertwo-left{
-    float: left;
-    margin: 0 0;
     position: relative;
     width: 300px;
-
+    display: inline-block;
 }
 #headertwo-left>h1{
     margin: 0 0;
@@ -156,6 +158,7 @@ input{
     position: absolute;
     top: 54px;
     left: 65px;
+    padding: 0 0;
     font-size: 10px;
     text-transform:uppercase;
     letter-spacing: -0.7px;
@@ -180,7 +183,7 @@ input{
     vertical-align: middle;
     padding-left: 10px;
     padding-right: 30px;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 /*nav导导导导导导导导导导导导导导导导航*/
@@ -278,9 +281,7 @@ img{
 #circle{
     width: 300px;
     height: 300px;
-    background-image: url(../images/circle.png);
-    background-repeat: no-repeat;
-    position: relative;
+    position: relative; 
     top: 120px;
     left: 400px;   
 }
@@ -696,6 +697,18 @@ div#kingTrain{
     background-color: rgb(43,181,110);
     cursor: pointer;
 }
+/*服服服服服服服服服服服服服服务优势*/
 #merit{
     text-align: center;
+}
+#meritTitle{
+    height: 170px;
+    background-color: rgb(19,35,51);
+}
+#meritTitle h1,
+#meritTitle h1+p{
+    margin-top: 50px;
+}
+#meritTitle p{
+    color: white;
 }
