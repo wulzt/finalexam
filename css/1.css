@@ -18,26 +18,29 @@ a{
 } 
 .title h1{
     font-size: 48px;
+    height: 57px;
+    line-height: 57px;
     letter-spacing: 1px;
     border-right: solid 10px rgb(244, 152, 0);
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 14px;
     color: rgb(244, 152, 0);
+    position: relative;
+    top: -6px;
 }
 .title p{
     display: inline-block;
 }
 h1 + p{
     font-size: 30px;
-    padding: 5px 0 0 5px;
+    padding: 0 0 0 11px;
     position: absolute;
-    top: -7px;
 }
 .title p + p{
     position: relative;
-    left: 7px;
-    top: 10px;
     font-size: 18px;
+    padding: 0 0 0 11px;
+    margin-top: 74px;
 }
 /* headerone*/
 #headerone{
@@ -158,11 +161,11 @@ input{
     margin: 0 0;
     position: absolute;
     top: 58px;
-    left: 84px;
+    left: 70px;
     padding: 0 0;
-    font-size: 10px;
+    font-size: 12px;
+    transform: scale(0.8);
     text-transform:uppercase;
-    letter-spacing: -0.7px;
 }
 #intro{
     width: 350px;
@@ -192,8 +195,15 @@ input{
 nav li{
     list-style-type: none;
     float: left;
-    padding: 5px 39px;
-    font-size: 21px;
+    width: 171px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+nav li:hover{
+    background-color: rgb(13,176,95);
+    cursor: pointer;
 }
 nav{
     background-color: rgb(244, 152, 0)
@@ -202,9 +212,9 @@ ul{
     margin: 0 0;
     padding: 0 0;
 }
-/*scroll轮轮轮轮轮轮轮轮轮轮轮轮轮轮播图*/
-#scroll{
-    height: 437px;
+/*banner轮轮轮轮轮轮轮轮轮轮轮轮轮轮播图*/
+#banner{
+    height: 500px;
     position: relative;
     background-color: rgb(238, 226, 175);
 }
@@ -212,7 +222,7 @@ img{
     vertical-align: top;
 }
 #container{
-    height: 437px;
+    height: 500px;
     overflow: hidden;
     position: relative;
 
@@ -232,7 +242,7 @@ img{
     z-index: 2;
     height: 10px;
     width: 100px;
-    top: 400px;
+    bottom: 30px;
     left: 550px;
 }
 #buttons span{
@@ -253,12 +263,12 @@ img{
     cursor: pointer;
 }
 #prev{
-    top: 100px;
+    top: 150px;
     left: 50px;
     background-position: 0 0;
 }
 #next{
-    top: 100px;
+    top: 150px;
     right: 50px;
     background-position: -100px 0px;
 }
@@ -271,33 +281,34 @@ img{
     background-color: rgb(20, 36, 52);
 }
 #item .inner{
-    height: 680px;
+    height: 871px;
     text-align: center;
 }
 #item .title p{
     color: white;
 }
 #bulb{
-    position: relative;
+    display: inline-block;
 }
 #circle{
-    width: 300px;
-    height: 300px;
-    position: relative; 
-    top: 120px;
-    left: 400px;   
+    width: 410px;
+    height: 410px;
+    position: relative;
 }
 #circle>div{
-    width: 129px;
-    height: 129px;
+    width: 174px;
+    height: 174px;
+    margin: auto auto;
     position: absolute;
-    top: 95px;
-    left: 90px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .littleBox{
     background-color: white;
-    height: 37px;
-    width: 37px;
+    height: 50px;
+    width: 50px;
     float: left;
     margin: 3px;
     border-radius: 6px;
@@ -305,23 +316,23 @@ img{
     background-repeat: no-repeat;
 }
 #store{
-    background-position: -64px -12px;
+    background-position: -56px 0px;
     position: relative;
-    top: -8px;
+    top: -10px;
     left: 5px;
     transform: rotateZ(-25deg);
 }
 #set{
-    background-position: -114px -10px;
+    background-position: -116px 0px;
     position: relative;
     top: -12px;
     left: 14px;
 }
 #train{
-    background-position: -10px -65px;
+    background-position:9px -64px;
 }
 #push{
-    background-position: -58px -68px;
+    background-position: -50px -65px;
 }
 #push + div{
     transform: rotateZ(30deg);
@@ -330,48 +341,49 @@ img{
     left: 3px;
 }
 #public{
-    background-position: -56px -113px;
+    background-position: -48px -122px;
 }
 #design{
-    background-position: -105px -113px;
+    background-position: -105px -122px;
 }
 #circle h3{
+    font-size: 30px;
+    margin: 0;
     color: rgb(244, 152, 0);
     position: absolute;
-    top: 226px;
-    left: 118px;
+    left: 0;
+    right: 0;
+    bottom: 45px;
 }
+
 #bulb-bottom div:first-child{
-    width: 105px;
-    height: 70px;
+    width: 150px;
+    height: 100px;
     background-color: rgb(244, 152, 0);
-    position: relative;
-    top: 105px;
-    left: 500px;
     border-radius: 8px;
+    margin: 0 auto;
+    margin-top: -18px;
 }
 #bulb-bottom div:first-child + div{
-    width: 77px;
-    height: 24px;
+    width: 100px;
+    height: 30px;
     background-color: rgb(244, 152, 0);
     border-radius: 5px;
-    position: relative;
-    top: 110px;
-    left: 514px;
+    margin: 0 auto;
+    margin-top: 5px;
 }
 #halfcircle{
-    width: 30px;
-    height: 15px;
+    width: 40px;
+    height: 20px;
     background-color: rgb(46, 182, 109);
-    position: relative;
-    top: 115px;
-    left: 538px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+    margin-top: 5px;
 }
 
 /*平平平平平平平平平平平平平平平平台搭建*/
 #build{
-    height: 660px;
+    height: 845px;
 }
 #build .inner{
     text-align: center;
@@ -380,57 +392,64 @@ img{
     color: black;
 }
 .boxx{
-    height: 180px;
+    height: 220px;
     text-align: center;
 }
 .function{
     display: inline-block;
-    height: 150px;
-    width: 200px;
+    height: 200px;
+    width: 270px;
     margin: 10px;
     background-image: url(../images/4.png);
     background-repeat: no-repeat;
     background-size: 350%;
     border-radius: 5px;
 }
+
 #build .inner >p{
-    font-size: 20px;
+    font-size: 24px;
+
+    margin: 50px 0 40px 0;
+}
+#build .title +p{
+    margin: 26px 0 30px 0;
 }
 #function_1{
     background-color: rgb(82,178,227);
-    background-position: 70px 25px;
+    background-position: 96px 38px;
 }
 #function_2{
     background-color:rgb(171,100,145);
-    background-position: -140px 25px;
+    background-position: -190px 38px;
 }
 #function_3{
     background-color:rgb(130,207,54);
-    background-position: -350px 25px;
+    background-position: -482px 38px;
 }
 #function_4{
     background-color:rgb(43,192,167);
-    background-position: -565px 25px;
+    background-position: -767px 38px;
 }
 #function_5{
     background-color:rgb(73,203,126);
-    background-position: 70px -220px;
+    background-position: 96px -291px;
 }
 #function_6{
     background-color:rgb(134,138,232);
-    background-position: -140px -220px;
+    background-position: -190px -291px;
 }
 #function_7{
     background-color:rgb(249,122,116);
-    background-position: -350px -220px;
+    background-position: -482px -291px;
 }
 #function_8{
     background-color:rgb(47,154,229);
-    background-position: -565px -220px;
+    background-position: -767px -291px;
 }
 .function p{
     color: white;
-    padding-top: 100px;
+    font-size: 18px;
+    padding-top: 145px;
 }
 /*全全全全全全全全全全全全全全全全网营销*/
 #market{
@@ -438,81 +457,88 @@ img{
 }
 #market .inner{
     text-align: center;
-    height: 350px;
+    height: 456px;
 }
 #market .inner p{
     color: white;
 }
+#market .title +p{
+    font-size: 24px;
+}
 .circle-border{
-    height: 110px;
-    width: 110px;
-    border: solid 2px rgb(0, 246, 247);
+    height: 150px;
+    width: 150px;
+    border: solid 3px rgb(0, 246, 247);
     border-radius: 50%;
     background-image: url(../images/5.png);
     background-repeat: no-repeat;
-    background-size: 420%;
 }
 #content{
-    margin-top: 34px;
+    margin-top: 40px;
 }
 #content div{
     display: inline-block;
 }
 .line{
-    width: 105px;
-    height: 2px;
-    margin: 0 -4px;
+    width: 140px;
+    height: 3px;
+    margin: 0 -5px;
     background-color: rgb(0,246,247);
     position: relative;
-    top: -90px;
+    top: -115px;
 }
 .circle-border + p{
-    font-size: 14px;
+    font-size: 18px;
 }
 #circle-border_1{
-    background-position: 26px 29px;
+    background-position: 33px 40px;
 }
 #circle-border_2{
-    background-position: -176px 29px;
+    background-position: -256px 40px;
 }
 #circle-border_3{
-    background-position: -382px 29px;
+    background-position: -545px 40px;
 }
 /*网网网网网网网网网网网网网网站优化*/
 #optimize{
     background-color: rgb(209,56,100);
 }
 #optimize .inner{
-    height: 350px;
+    height: 456px;
 }
 #optimize h1{
     color: white;
-    padding-left: 130px;
+    font-size: 36px;
+    padding-left: 62px;
 }
 #optimize h1 + div{
-    height: 230px;
-    margin-left: 130px;
+    margin-left: 62px;
+    overflow: hidden;
 }
-#optimize h1 + div>div{
-    height: 230px;
-    width: 400px;
-    border-radius: 5px;
+.adv{
+    height: 310px;
+    width: 526px;
+    border-radius: 6px;
     float: left;
-    background-size: 100%;
+    position: relative;
 }
 #adv1{
     background-image: url(../images/adv1.jpg);
+    margin-right: 10px;
 }
 #adv2{
     background-image: url(../images/adv2.jpg);
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .adv div{
-    height: 35px;
+    width: 526px;
+    height: 50px;
+    line-height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    top: 195px;
-    display: none
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 6px 6px;
+    display: none;
 }
 .adv:hover{
     cursor: pointer;
@@ -523,28 +549,27 @@ img{
 }
 .adv p{
     color: white;
-    font-size: 14px;
-    padding: 0 0 0 15px;
+    font-size: 18px;
     margin: auto 0;
-    position: absolute;
+    padding-left: 19px;
 }
 p>span{
-    font-size: 22px;
+    font-size: 30px;
 }
 /*品品品品品品品品品品品品品品牌推广*/
 #promotion{
-    height: 556px;
     position: relative;
 }
 #promotion h1{
-    padding-left: 130px;
-    margin: 37px 0;
+    padding-left: 62px;
+    margin: 60px 0 35px 0;
+    font-size: 36px;
 }
 #showWhite{
-    height: 292px;
+    height: 380px;
 }
 #showGrey{
-    height: 264px;
+    height: 350px;
     background-color: rgb(220,220,220);
 }
 #promotion .inner{
@@ -552,15 +577,15 @@ p>span{
     top: 0;
     left: 0;
     right: 0;
-    height: 556px;
+    height: 730px;
 }
 #push{  
     overflow: hidden;/*让父元素包含浮动的子元素*/
     color: white;
 }
 .push{
-    height: 340px;
-    width: 266px;
+    height: 450px;
+    width: 350px;
     float: left;
     margin: 10px;
     border: solid 1px rgb(8,144,216);
@@ -570,8 +595,8 @@ p>span{
     overflow: hidden;
 }
 #push_1{
-    margin-left: 125px;
     background-color: rgb(244,152,0);
+    margin-left: 62px;
 }
 #push_2{
     background-color: rgb(42,196,113);
@@ -580,84 +605,81 @@ p>span{
     background-color: rgb(244, 152, 0);
 }
 .push div{
-    height: 106px;
+    height: 141px;
     background-repeat: no-repeat;
 }
 #push_1 > div{
     background-image: url(../images/cctv.jpg);
-    background-size: 120%;
-    background-position: -30px -23px;
+    background-position: -55px -30px;
 }
 #push_2 > div{
     background-image: url(../images/tencent.jpg);
-    background-size: 100%;
-    background-position: 0 -93px;
+    background-position: 0 -125px;
 }
 #push_3 > div{
     background-image: url(../images/pyq.jpg);
-    background-size: 110%;
     background-position: 0 -15px;
 }
 .push h2{
-    font-size: 26px;
-    margin: 0 50px;
-    padding: 25px 0;
+    font-size: 36px;
+    padding: 46px 0 29px 0;
+    margin: 0;
 }
 .push h2 + p{
+    font-size: 18px;
     padding: 0 0px;
-    margin: 0 45px;
+    margin: 0 82px 0 70px;
     border-top: solid 1px white;
-    padding-top: 20px;
+    padding-top: 35px;
     text-align: left;
 }
 #push_2 p{
-    margin: 0 27px;
+    margin: 0 69px 0 63px;
 }
 #push_3 p{
-    margin: 0 53px;
+    margin: 0 80px 0 89px;
 }
 /*特特特特特特特特特特特特特特特特色服务*/
 #feature .inner{
     text-align: center;
-    height: 340px;
+    height: 445px;
 }
 #feature h1{
     color: black;
 }
 div.showBlack{
-    height: 187px;
-    width: 170px;
+    height: 242px;
+    width: 225px;
     overflow: hidden;
     margin: 15px 10px;
     display: inline-block;
     border-radius: 4px;
     background-image: url(../images/feature.png);
     background-repeat: no-repeat;
-    background-size: 250%;
 }
 #feature h3{
-    margin-top: 110px;
+    margin-top: 152px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
 }
 #feature h3 + p{
-    margin-top: 10px;
-    font-size: 12px;
-    padding: 0 14px;
+    font-size: 14px;
+    padding: 0 35px;
+    margin: 10px 0;
     color: white;
 }
 #showPurple{
     background-color: rgb(134,138,232);
-    background-position: 55px 25px;
+    background-position: 76px 39px;
 }
 #showPink{
     background-color: rgb(249,122,116);
-    background-position: -128px 25px;
+    background-position: -168px 39px;
 }
 #showGrape{
     background-color: rgb(171,100,145);
-    background-position: -312px 25px;
+    background-position: -413px 39px;
 }
 div.showBlack:hover{
     background-image: url(../images/featureHover.png);
@@ -669,31 +691,33 @@ div.showBlack:hover{
     color: black;
 }
 div#kingTrain{
-    width: 320px;
-    height: 187px;
+    width: 405px;
+    height: 242px;
     margin: 15px 10px;
+    padding-left:20px;
     display: inline-block;
     text-align: left;
     overflow: hidden;
 }
-#kingTrain p{
+#kingTrain>p{
     margin: 0;
+    padding: 16px 0 20px 0;
+    font-size: 18px;
 }
 #kingTrain ol{
-    font-size: 12px;
+    font-size: 14px;
     line-height: 2em;
     padding-left: 15px;;
+    margin: 0;
 }
 #apply{
-    height: 35px;
-    width: 140px;
+    height: 40px;
+    width: 150px;
+    line-height: 40px;
     color: white;
     background-color: rgb(244,152,0);
     border-radius: 5px;
     text-align: center;
-}
-#apply p{
-    padding-top: 5px;
 }
 #apply:hover {
     background-color: rgb(43,181,110);
@@ -702,15 +726,99 @@ div#kingTrain{
 /*服服服服服服服服服服服服服服务优势*/
 #merit{
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+/*meritTitle*/
 #meritTitle{
     height: 170px;
     background-color: rgb(19,35,51);
 }
-#meritTitle h1,
-#meritTitle h1+p{
-    margin-top: 50px;
+#meritTitle>div{
+    height: 60px;
+    line-height: 60px;
+}
+#meritTitle>div>h1 +p{
+    padding-top: 9px;
 }
 #meritTitle p{
     color: white;
+}
+/*meritContent*/
+.meritContent{
+    margin-bottom: 20px;
+}
+#merit_4{
+    margin-bottom: 0;
+}
+.showYellow{
+    background:-webkit-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
+    background:-moz-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
+    background:-o-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
+    background:linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
+    height: 300px;
+}
+.showGreen{
+    background:-webkit-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
+    background:-moz-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
+    background:-o-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
+    background:linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
+    height: 300px;
+}
+.meritText h3,
+.meritText p{
+    color: white;
+}
+.meritText h3{
+    font-size: 24px;
+    margin: 91px 0 30px 0;
+}
+.meritText p{
+    font-size: 18px;
+}
+.meritText{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    height: 300px;
+}
+#meritText_1{
+    width: 364px;
+    padding-right: 66px;
+}
+#meritText_2{
+    width: 288px;
+    padding-left: 70px;
+    padding-right: 100px;
+}
+#meritText_3{
+    width: 407px;
+    padding-right: 79px;
+    padding-left: 50px;
+}
+#meritText_4{
+    width: 378px;
+    padding-left: 123px;
+}
+.meritImage{
+    width: 491px;
+    height: 300px;
+    margin-right: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#meritImage_1{
+    background-image: url(../images/many.png);
+}
+#meritImage_2{
+    background-image: url(../images/package.png);
+    margin-right: 80px;
+}
+#meritImage_3{
+    background-image: url(../images/team.png);
+}
+#meritImage_4{
+    background-image: url(../images/computer.png);
 }

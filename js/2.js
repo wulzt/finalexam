@@ -7,16 +7,16 @@ window.onload = function(){
     var buttons = document.getElementById("buttons").getElementsByTagName("span");
     var index = 1;
     var timer;  
-    var scroll = document.getElementById("scroll");
+    var banner = document.getElementById("banner");
     //算移动距离
     function animate(offset){
         var newLeft = parseInt(list.style.left) + offset;
         list.style.left = newLeft + "px";
-        if(newLeft<-3300){
-            list.style.left = -1100 + "px";
+        if(newLeft<-3600){
+            list.style.left = -1200 + "px";
         }
-        if(newLeft>-1100){
-            list.style.left = -3300 + "px";
+        if(newLeft>-1200){
+            list.style.left = -3600 + "px";
         }
     }
     
@@ -36,7 +36,7 @@ window.onload = function(){
             index = 3;
         }
         buttonsShow();
-        animate(1100);
+        animate(1200);
     }
     next.onclick = function(){
         index += 1;
@@ -44,7 +44,7 @@ window.onload = function(){
             index = 1;
         }
         buttonsShow();
-        animate(-1100);
+        animate(-1200);
     }
     //定时器 2.5s循环播放
     function play(){
@@ -57,7 +57,7 @@ window.onload = function(){
     for(var i = 0;i<buttons.length;i++){
         buttons[i].onclick = function(){
             var clickIndex = parseInt(this.getAttribute("index"));
-            var offset = 1100 * (index - clickIndex);
+            var offset = 1200 * (index - clickIndex);
             animate(offset);
             index = clickIndex;
             buttonsShow();
@@ -67,8 +67,8 @@ window.onload = function(){
     function stop(){
         clearInterval(timer);
     }
-    scroll.onmouseover = stop;
-    scroll.onmouseout = play;
+    banner.onmouseover = stop;
+    banner.onmouseout = play;
 
     play();
 
@@ -78,10 +78,10 @@ window.onload = function(){
 
     // cxt.strokeStyle='black';
     cxt.beginPath();
-    cxt.arc(150,150,150,0.33*Math.PI,0.66*Math.PI,true);
-    cxt.lineTo(90,260);
-    cxt.arc(150,150,120,0.66*Math.PI,0.33*Math.PI);
-    cxt.lineTo(215,260);
+    cxt.arc(205,205,205,0.30*Math.PI,0.70*Math.PI,true);
+    cxt.lineTo(113,332);
+    cxt.arc(205,205,160,0.70*Math.PI,0.30*Math.PI);
+    cxt.lineTo(297,332);
     cxt.closePath();
     cxt.fillStyle= "rgb(244,152,0)";
     cxt.fill();
