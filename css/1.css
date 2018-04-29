@@ -822,3 +822,317 @@ div#kingTrain{
 #meritImage_4{
     background-image: url(../images/computer.png);
 }
+/*企企企企企企企企企企企企业案例*/
+#case{
+    background-color: rgb(19,35,51);
+}
+#case .inner{
+    height: 500px;
+    text-align: center;
+}
+#case .title{
+    color: white;
+    top: -4px;
+}
+#caseContent{
+    position: relative;
+    top: -16px;
+}
+#caseContent div{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    display: inline-block;
+    border: solid 3px rgb(153,153,153);
+    border-radius: 50%;
+    margin: 15px 17.5px;
+}
+/*服服服服服服服服服服服服务套餐*/
+#menu .inner{
+    height: 1193px;
+    text-align: center;
+}
+#menu .title{
+    top: 14px;
+}
+#menu .title h1{
+    color: black;
+}
+#menuContent table{
+    display: block;
+    height: 810px;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(220,220,220);
+    border-collapse: collapse;
+    position: relative;
+    top: 5px;
+    border: 1px solid rgb(46,182,109);
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.52);
+    margin-top: -5px;
+    overflow: hidden;
+}
+#tableTitle{
+    height: 90px;
+    width: 1000px;
+    background-color: rgb(244,152,0);
+    font-size: 24px;
+    border-radius:8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.52);
+    display: inline-block;
+}
+#tableTitle p{
+    margin-top: 29.5px;
+}
+table tr th,table tr td{
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+}
+table tr th:last-child,
+table tr td:last-child{
+    border-right: 0;
+}
+th{
+    font-size: 24px;
+}
+tr{
+    height: 65px;
+}
+tr td{
+    text-align: left;
+    font-size: 14px;
+}
+tr td:first-child{
+    font-size: 18px;
+}
+tr td:first-child + td{
+    padding-left: 27px;
+}
+tr td:last-child{
+    padding-left: 29px;
+}
+table tr:first-child{
+    height: 65px;
+}
+td>div{
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 14px 0 32px;
+    cursor: pointer;
+}
+table + button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(244,152,0);
+    border: 0;
+    border-radius: 5px;
+    margin-top: 40px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.71);
+}
+/*脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚*/
+#foot{
+    background-color: rgb(20,36,52);
+}
+#foot .inner{
+    height: 489px;
+    font-size: 0;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+}
+#foot p{
+    padding: 0;
+    margin: 0px;
+}
+#foot +div{
+    height: 19px;
+}
+#foot .inner>div{
+    display: inline-block;
+    height: 317px;
+    overflow: hidden;
+}
+#fastLogin{
+    width: 302px;
+}
+#map{
+    width: 250px;
+}
+#followUs{
+    width: 326px;
+}
+#contactUs{
+    width: 316px;
+}
+/*快速登录*/
+#greenBox{
+    width: 213px;
+    height: 67px;
+    background-color: rgb(13,176,95);
+    margin-left: 59px;
+    margin-top: 63px;
+    line-height: 30px;
+}
+#greenBox p{
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
+}
+#greenBox p:first-child{
+    padding-top: 3.5px;
+}
+#greenBox + p{
+    font-size: 18px;
+    margin: 18px 0 8px 59px;
+    color: rgb(153,153,153);
+}
+#un,#pw{
+    width: 212px;
+    height: 29px;
+    border: solid 1px rgb(49,49,49);
+    background-color: white;
+    margin-left: 61px;
+}
+#un p,#pw p{
+    color: rgb(51,51,51);
+    font-size: 16px;
+    display: inline-block;
+    width: 57px;
+    height: 29px;
+    line-height: 29px;
+    border-right: solid 1px rgb(49,49,49);
+    text-align: center;
+}
+#pw{
+    margin-top: 9px;
+    letter-spacing: 5px;
+}
+#pw + p{
+    font-size: 12px;
+    color: rgb(33,33,33);
+    padding-left: 220px;
+    margin-bottom: 16px;
+}
+#bt{
+    margin-left: 93px;
+}
+#bt button{
+    height: 26px;
+    width: 68px;
+    border: solid 1px rgb(49,49,49);
+    font-size: 18px;
+    background-color: rgb(244, 152, 0);
+    color: white;
+}
+#bt button:first-child{
+    margin-right: 12px;
+}
+/**********************************/
+#foot h3{
+    font-size: 18px;
+    color: rgb(209,209,209);
+    margin: 0;
+    padding: 49px 0 20px 51px;
+}
+#foot h3+div{
+    border-left: solid 2px grey;
+    height: 224px;
+}
+/*地图*/
+#map ul{
+    padding-top: 3px;
+    margin-left: 51px;
+    font-size: 16px;
+    list-style-type: none;
+    color: rgb(153,153,153);
+    line-height: 30px;
+}
+/*关注我们*/
+#followUs img{
+    margin: 55px 0 0 51px;
+}
+#followUs img+div{
+    display: inline-block;
+    margin: 55px 0 0 14px;
+}
+#followUsContent{
+    color: rgb(153,153,153);
+}
+#followUsContent h4{
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0;
+    padding: 9px 0 5px 0;
+}
+#followUsContent h4 + p{
+    font-size: 14px;
+}
+#followUsContent p>span{
+    color: rgb(209,209,209);
+    font-size: 14px;
+}
+#followUsContent div{
+    line-height: 14px;
+}
+#followUsContent div p{
+    font-size: 12px;
+    transform: scale(0.8);
+    margin-left: -12px;
+}
+/*联系我们*/
+#contactUs div div{
+    height: 75px;
+    background-repeat: no-repeat;
+    background-position: 21px center;
+}
+#call{
+    background-image: url(../images/call.png);
+}
+#qq{
+    background-image: url(../images/qq.png);
+}
+#time{
+    background-image: url(../images/time.png);
+}
+#contactUsContent div{
+    line-height: 24px;
+    padding-left: 67px;
+}
+#contactUsContent div p:first-child{
+    font-size: 18px;
+    color: rgb(153,153,153);
+    padding-top: 15px;
+}
+#contactUsContent div p:last-child{
+    font-size: 12px;
+    color: rgb(209,209,209);
+}
+#contactUsContent #call p:last-child{
+    font-size: 14px;
+}
+#contactUsContent button{
+    height: 21px;
+    width: 61px;
+    background-color: rgb(244, 152, 0);
+    border: 0;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 211px;
+    left: 1054px;
+}
+/*版权所有*/
+#copyright{
+    font-size: 16px;
+    color: rgb(153,153,153);
+    text-align: center;
+    width: 192px;
+    margin: 0 43%;
+    margin-top: 79px;
+}
