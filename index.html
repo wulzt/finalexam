@@ -10,15 +10,15 @@
 </head>
 <body>
     <div id="header"><!--header-->
-        <div id="headerone"><!--headerone 待补充交互-->
+        <div id="headerone"><!--headerone-->
             <div class="inner">
                 <span id="headerone-left">
                     <a href="#">回到首页</a>
                     <a href="#"><span style="margin:0 10px;">关注微信</span></a>
                 </span>
                 <span id="headerone-right">
-                    <a href="#" id="signUp" style="margin: 0 15px;">注册</a>
-                    <a href="javascript:void(0);" onclick="window.open()">登录</a>
+                    <a href="javascript:void(0)" id="signUp" style="margin: 0 15px;">注册</a>
+                    <a href="javascript:void(0);" id="logIn" onclick="loginOpen()">登录</a>
                 </span>
             </div>
         </div>
@@ -45,7 +45,7 @@
     <div id="login">
         <div id="hi">
             <h3>Hello!&nbsp;&nbsp;欢迎光临</h3>
-            <div class="close"><a href="javascript:void(0);" onclick="window.close()">×</a></div>
+            <div id="loginClose" onclick="loginClose()">×</div>
         </div>
         <div class="loginCon">
             <form>
@@ -55,7 +55,7 @@
                 <div id="pwd">
                 <input type="password" name="password" id="password" placeholder="密码">
                 </div>
-                <button type="submit" id="btn" onclick="login()">登录</button>
+                <button type="submit" id="btn" onclick="return login()">登录</button>
             </form>
         </div>
     </div>
@@ -120,6 +120,21 @@
                     <div></div>
                     <div id="halfcircle"></div>
                 </div>
+            </div>
+            <div id="itemMore">
+                <div>
+                    <div>微营销培训</div>
+                    <div>公众号搭建</div>
+                    <div>文案策划</div>
+                    <div>微商城装修</div>
+                    <div>品牌推广</div>
+                    <div>自媒体推广</div>
+                    <div>SEO优化</div>
+                    <div>付费推广央视广告</div>
+                    <div>诚信授牌</div>
+                    <div>舆情检测</div>
+                </div>
+                <button>了解详情</button>
             </div>
         </div>
     </div>
@@ -313,6 +328,22 @@
                 <div id="case_12" class="companyCase"></div>
             </div>
         </div>
+        <div id="caseMask"></div>
+        <div id="oneCase">
+            <div id="caseClose" onclick="closeOneCase()">×</div>
+            <div id="oneCaseTitle"></div>
+            <div id="oneCaseContent">
+                <div>
+                    <div id="caseImg"></div>
+                    <p id="companyName"></p>
+                </div>
+                <div id="caseIntro">
+                    <p>企业案例介绍：</p>
+                    <p id="caseBlaBla"></p>
+                    <a href="" id="getMore">获取更多→</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="menu"><!--服务套餐-->
         <div class="inner">
@@ -472,21 +503,21 @@
     </div>
     <div></div>
 
-    <script type="text/javascript">/*mockjs*/
+    <script type="text/javascript">/*mockjs*/        
         // Mock响应模板
         Mock.mock('http://vtmer.cn/class', {
-        "item|12": [{ // 随机生成12个数组元素
-            'name': '@name', // 企业名称
-            'id|+1': 1, // 属性值自动加 1，初始值为0
-            'title': '@title(3,5)', //案例标题
-            'img': '@image(440x440,@color(),png)',
-            'intro': '@paragraph(5,8)',
-            'url': '@url()',      //企业链接
-        }]
+            "item|12": [{ // 随机生成12个数组元素
+                'name': '@name', // 企业名称
+                'id|+1': 1, // 属性值自动加 1，初始值为0
+                'title': '@title(3,5)', //案例标题
+                'img': '@image(440x440,@color(),png)',
+                'intro': '@paragraph(5,8)',
+                'url': '@url()',      //企业链接
+            }]
         });
 
         //ajax请求
-        $(".companyCase").click(function(){
+        $("#case .title").click(function(){
             $.ajax({
                 url        : "http://vtmer.cn/class",    //请求的url地址
                 dataType   : "json",   //返回格式为json
@@ -496,7 +527,28 @@
                 success: function(req) {
                     //请求成功时处理
                     console.log(req);
+                    var myList = document.getElementsByClassName("companyCase");
+                    for(var i=0; i<myList.length;i++){
+                         console.log(req.item[i].img);
+                         console.log(req.item[i].name);
+                         myList[i].style.backgroundImage = "url(\"" + req.item[i].img + ";";
+                     }
+                    for(var i = 0;i<myList.length;i++){
+                        (function(i){
+                            myList[i].onclick = function(){
+                                console.log(i);
+                                console.log(req.item[i].name);
+                                openOneCase();
+                                getId("companyName").innerHTML = req.item[i].name;
+                                getId("oneCaseTitle").innerHTML = req.item[i].title;
+                                getId("caseImg").style.backgroundImage = "url(\"" + req.item[i].img + ";";
+                                getId("caseBlaBla").innerHTML = req.item[i].intro;
+                                getId("getMore").setAttribute("href",req.item[i].url);
+                            }
+                        })(i)
+                    }
                 }
+            
             });
         });
     </script>

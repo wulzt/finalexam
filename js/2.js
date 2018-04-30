@@ -55,13 +55,15 @@ window.onload = function(){
 
 
     for(var i = 0;i<buttons.length;i++){
-        buttons[i].onclick = function(){
-            var clickIndex = parseInt(this.getAttribute("index"));
-            var offset = 1200 * (index - clickIndex);
-            animate(offset);
-            index = clickIndex;
-            buttonsShow();
-        }
+        (function(i){
+            buttons[i].onclick = function(){
+                var clickIndex = parseInt(this.getAttribute("index"));
+                var offset = 1200 * (index - clickIndex);
+                animate(offset);
+                index = clickIndex;
+                buttonsShow();
+            }
+        })(i)
     }
 
     function stop(){
@@ -88,23 +90,53 @@ window.onload = function(){
     // cxt.stroke();
 
 }
-// //登录
-function open(){
-    document.getElementById("mask").style.display = "block";
-    document.getElementById("login").style.display = "block";
-}
-function close(){
-    document.getElementById("mask").style.display = "none";
-    document.getElementById("login").style.display = "none";
+
+//封装获取元素的方法
+function getId(id){
+    return typeof(id) === "string"?document.getElementById(id):id;  
 }
 
+
+//登录
+
+//弹出登录框
+function loginOpen(){
+    getId("mask").style.display = "block";
+    getId("login").style.display = "block";
+}
+//关闭登录框
+function loginClose(){
+    getId("mask").style.display = "none";
+    getId("login").style.display = "none";
+    return false;
+}
 
 function login(){
-    var username = document.getElementById("username");
+    //先关了登录框
+    loginClose();
+    var username = getId("username");
     if(username.value){
-        alert(username.value);  
-        var r = document.getElementById("headerone-right");
-        var child = document.getElementById("signUp");
-        var e = r.removeChild(child);
+        //移除“注册”“登录”
+        getId("headerone-right").removeChild(getId("logIn"));
+        getId("headerone-right").removeChild(getId("signUp"));
+        //create“×××你好”的div
+        var myDiv = document.createElement("div");
+        myDiv.id = "niHao";
+        var textNode = document.createTextNode(username.value+",你好");
+        myDiv.appendChild(textNode);
+        //放进去
+        getId("headerone-right").appendChild(myDiv);
     }
+    return false;
+}
+
+//企业案例
+
+function openOneCase(){
+    getId("caseMask").style.display = "block";
+    getId("oneCase").style.display = "block";
+}
+function closeOneCase(){
+    getId("caseMask").style.display = "none";
+    getId("oneCase").style.display = "none";
 }

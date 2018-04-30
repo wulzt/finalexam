@@ -45,8 +45,9 @@ h1 + p{
 /* headerone*/
 #headerone{
     background-color: rgb(233, 233, 233);
-    padding: 12px 0;
     font-size: 12px;
+    height: 40px;
+    line-height: 40px;
 }
 
 #headerone-left{
@@ -59,6 +60,13 @@ h1 + p{
 }
 #headerone-right span{
     cursor: pointer;
+}
+#niHao{
+    font-size: 12px;
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    text-align: right;
 }
 /*登登登登登登登登登登登登登登登登录录录录录录录录录录录录录录录*/
 #mask{
@@ -101,12 +109,13 @@ h1 + p{
     font-size: 30px;
     margin-top: 12px;
 }
-.close>a{
+#loginClose{
     position: absolute;
     top: -7px;
     right:10px;
     font-size: 48px;
     color: white;
+    cursor: pointer;
 }
 input{
     height: 69px;
@@ -206,7 +215,7 @@ nav li:hover{
     cursor: pointer;
 }
 nav{
-    background-color: rgb(244, 152, 0)
+    background-color: rgb(244, 152, 0);
 }
 ul{
     margin: 0 0;
@@ -283,17 +292,24 @@ img{
 #item .inner{
     height: 871px;
     text-align: center;
+    position: relative;
 }
 #item .title p{
     color: white;
 }
 #bulb{
     display: inline-block;
+    width: 670px;
+    height: 684px;
+    background: url(../images/circleFont.png) no-repeat top;
+    text-align: center;
 }
 #circle{
     width: 410px;
     height: 410px;
+    display: inline-block;
     position: relative;
+    top: 130px;
 }
 #circle>div{
     width: 174px;
@@ -355,7 +371,10 @@ img{
     right: 0;
     bottom: 45px;
 }
-
+#bulb-bottom{
+    position: relative;
+    top: 130px;
+}
 #bulb-bottom div:first-child{
     width: 150px;
     height: 100px;
@@ -380,7 +399,37 @@ img{
     margin: 0 auto;
     margin-top: 5px;
 }
-
+#itemMore{
+    width: 150px;
+    position: absolute;
+    bottom: 59px;
+    right: 140px;
+}
+#itemMore>div{
+    font-size: 14px;
+    color: rgb(210,210,210);
+    text-align: left;
+    line-height: 25px;
+}
+#itemMore div div{
+    background: url(../images/gou.png) no-repeat left;
+    padding-left: 30px;
+}
+#itemMore button{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(244,152,0);
+    border: 0;
+    border-radius: 5px;
+    position: relative;
+    top: 6px;
+    font-size: 18px;
+    color: #ffffff;
+}
+#itemMore button:hover{
+    background-color: rgb(46,182,109);
+    cursor: pointer;
+}
 /*平平平平平平平平平平平平平平平平台搭建*/
 #build{
     height: 845px;
@@ -825,6 +874,7 @@ div#kingTrain{
 /*企企企企企企企企企企企企业案例*/
 #case{
     background-color: rgb(19,35,51);
+    position: relative;
 }
 #case .inner{
     height: 500px;
@@ -833,6 +883,7 @@ div#kingTrain{
 #case .title{
     color: white;
     top: -4px;
+    cursor: pointer;
 }
 #caseContent{
     position: relative;
@@ -846,6 +897,95 @@ div#kingTrain{
     border: solid 3px rgb(153,153,153);
     border-radius: 50%;
     margin: 15px 17.5px;
+    background-image: url(../images/1.jpg);
+}
+#caseMask{
+    height: 1234px;
+    width: 100%;
+    background-color:#000;
+    opacity: 0.71;
+    z-index: 998;
+    position: absolute;
+    top: -237px;
+    display: none;
+}
+#oneCase{
+    height: 1234px;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: -237px;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+#caseClose{
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    top: 77px;
+    right: 48px;
+    cursor: pointer;
+}
+#oneCaseTitle{
+    font-size: 60px;
+    color: white;
+    margin-top: 57px;
+    position: relative;
+    display: inline-block;
+}
+#oneCaseTitle::before{
+    content: url(../images/before.png);
+    position: absolute;
+    left:-40px;
+}
+#oneCaseTitle::after{
+    content: url(../images/after.png);
+    position: absolute;
+    right:-40px;
+    bottom: -20px;
+}
+#oneCaseContent{
+    margin-top: 100px;
+}
+#oneCaseContent > div{
+    display: inline-block;
+    height: 1000px;
+    overflow: hidden;
+}
+#caseImg{
+    height: 440px;
+    width: 440px;
+}
+#companyName{
+    color: white;
+    font-size: 60px;
+    margin-top: 80px;
+}
+#caseIntro{
+    width: 800px;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    padding-left: 113px;
+    line-height: 52px;
+    position: relative;
+}
+#caseIntro p:first-child{
+    line-height: 52px;
+    margin: 0;
+}
+#caseIntro p:first-child + p{
+    line-height: 52px;
+    margin: 0;
+    text-indent: 2em;
+}
+#caseIntro a{
+    font-size: 24px;
+    color: rgb(254,162,9);
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 /*服服服服服服服服服服服服务套餐*/
 #menu .inner{
