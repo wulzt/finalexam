@@ -78,7 +78,6 @@ window.onload = function(){
     var c=document.getElementById("myCanvas");
     var cxt=c.getContext("2d");
 
-    // cxt.strokeStyle='black';
     cxt.beginPath();
     cxt.arc(205,205,205,0.30*Math.PI,0.70*Math.PI,true);
     cxt.lineTo(113,332);
@@ -87,8 +86,36 @@ window.onload = function(){
     cxt.closePath();
     cxt.fillStyle= "rgb(244,152,0)";
     cxt.fill();
-    // cxt.stroke();
 
+
+    //menu选择
+    var menuList = document.getElementsByClassName("menuChoose");
+    var haveChooseList = document.getElementsByClassName("gou");
+    var showRedList = document.getElementsByClassName("showRed");
+    for(var i=0;i<menuList.length;i++){
+        (function(i){
+            menuList[i].onclick = function(){
+                if(haveChooseList[i].style.opacity == 0){
+                    haveChooseList[i].style.opacity = "1";
+                    showRedList[i].style.color = "red";
+                }else{
+                    haveChooseList[i].style.opacity = "0";
+                    showRedList[i].style.color = "black";
+                }
+            }
+        })(i)
+    }
+
+    //输出选中的套餐
+    function put(){
+        console.clear();
+        for(var i=0;i<showRedList.length;i++){
+            if(getComputedStyle(haveChooseList[i]).opacity == 1){
+                console.log(showRedList[i].getElementsByTagName("td")[0].innerText);
+            }
+        }
+    }
+    getId("button_1").onclick = put;
 }
 
 //封装获取元素的方法
@@ -135,6 +162,8 @@ function login(){
 function openOneCase(){
     getId("caseMask").style.display = "block";
     getId("oneCase").style.display = "block";
+    getId("caseMask").style.animation = "myMove_1 2s";
+    getId("oneCase").style.animation = "myMove_2 2s";
 }
 function closeOneCase(){
     getId("caseMask").style.display = "none";

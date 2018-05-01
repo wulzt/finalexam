@@ -12,9 +12,18 @@ a{
     margin: 0 auto;
     overflow: hidden;
 }
+@keyframes myMove_1{
+    0%{opacity: 0;}
+    100%{opacity: 0.71;}  
+}
+@keyframes myMove_2{
+    0%{opacity: 0;}
+    100%{opacity: 1;}  
+}
 /*后后面各个板块的标题*/
 .title{
     position: relative;
+    height: 129px;
 } 
 .title h1{
     font-size: 48px;
@@ -24,23 +33,27 @@ a{
     border-right: solid 10px rgb(244, 152, 0);
     display: inline-block;
     padding-right: 14px;
+    margin: 0;
     color: rgb(244, 152, 0);
     position: relative;
-    top: -6px;
+    top: 35px;   
+    transform: translateX(-50%);
 }
 .title p{
     display: inline-block;
+    margin: 0;
 }
 h1 + p{
     font-size: 30px;
-    padding: 0 0 0 11px;
     position: absolute;
+    top: 28px;
+    left: 611px;
 }
 .title p + p{
-    position: relative;
+    position: absolute;
     font-size: 18px;
-    padding: 0 0 0 11px;
-    margin-top: 74px;
+    top: 72px;
+    left: 611px;
 }
 /* headerone*/
 #headerone{
@@ -783,12 +796,8 @@ div#kingTrain{
     height: 170px;
     background-color: rgb(19,35,51);
 }
-#meritTitle>div{
-    height: 60px;
-    line-height: 60px;
-}
-#meritTitle>div>h1 +p{
-    padding-top: 9px;
+#meritTitle .title{
+    top: 20.5px;
 }
 #meritTitle p{
     color: white;
@@ -1055,14 +1064,28 @@ tr td:last-child{
 table tr:first-child{
     height: 65px;
 }
-td>div{
+tr td:first-child{
+    padding-bottom: 4.5px;
+}
+.menuChoose{
     height: 24px;
     width: 24px;
     background-color: white;
     display: inline-block;
-    vertical-align: bottom;
     margin: 0 14px 0 32px;
+    vertical-align: bottom;
+    position: relative;
+    bottom: 0;
+    left: 0;
     cursor: pointer;
+}
+.gou{
+    width: 32px;
+    height: 31px;
+    background: url(../images/dui.png) no-repeat;
+    position: relative;
+    bottom: 7px;
+    opacity: 0;
 }
 table + button{
     width: 150px;
