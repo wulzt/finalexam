@@ -1,7 +1,7 @@
 body{
     margin: 0 0;
     padding: 0 0;
-    /* font-family: "Microsoft YaHei"; */
+    font-family: "Microsoft YaHei";
 }
 a{
     color: black;
@@ -9,6 +9,7 @@ a{
 }
 .inner{
     width: 1200px;
+    height: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -59,10 +60,12 @@ h1 + p{
 #headerone{
     background-color: rgb(233, 233, 233);
     font-size: 12px;
+}
+#headerone .inner{
+    overflow: visible;
     height: 40px;
     line-height: 40px;
 }
-
 #headerone-left{
     float: left;
     padding-left: 20px;
@@ -77,9 +80,9 @@ h1 + p{
 #niHao{
     font-size: 12px;
     display: inline-block;
-    height: 40px;
-    width: 200px;
     text-align: right;
+    position: relative;
+    right: -30px;
 }
 /*登登登登登登登登登登登登登登登登录录录录录录录录录录录录录录录*/
 #mask{
@@ -159,22 +162,21 @@ input{
 #headertwo{
     background-color: white;
     height: 120px;
-}
-#headertwo .inner{
-    padding-top: 25px;
+    white-space: nowrap;
 }
 #headertwo-left{
     padding-left: 20px;
     position: relative;
-    width: 300px;
+    width: 50%;
     display: inline-block;
+    padding-top: 25px;
 }
 #headertwo-left>h1{
     margin: 0 0;
     padding: 0 16px;
     position: absolute;
-    top: 12px;
-    left: 81px;
+    top:32px;
+    left: 85px;
     color: rgb(67, 133, 232);
     border-bottom: solid 1px black;
     letter-spacing: 4px;
@@ -182,7 +184,7 @@ input{
 #headertwo-left>p{
     margin: 0 0;
     position: absolute;
-    top: 58px;
+    top: 80px;
     left: 70px;
     padding: 0 0;
     font-size: 12px;
@@ -190,35 +192,38 @@ input{
     text-transform:uppercase;
 }
 #intro{
-    width: 350px;
+    height: 70px;
     position: absolute;
-    top: 0;
-    left: 220px;
+    top: 25px;
+    left: 235px;
     line-height: 17px;
     border-left: solid 2px rgb(233, 233, 233);;
     padding-left: 9px;
-    margin-left: 10px;
     font-size: 14px;
 }
 /*headertwo-right*/
 #headertwo-right{
     float: right;
+    margin-top: 42px;
 }
 #headertwo-right p{
     display: inline-block;
+    padding: 0 20px 0 12px;
+    margin: 0;
     color: rgb(255, 5, 5);
     vertical-align: middle;
-    padding-left: 12px;
-    padding-right: 20px;
     font-size: 24px;
 }
 
 /*nav导导导导导导导导导导导导导导导导航*/
+nav{
+    background-color: rgb(244, 152, 0);
+    height: 50px;
+}
 nav li{
     list-style-type: none;
     float: left;
     width: 171px;
-    height: 50px;
     font-size: 24px;
     text-align: center;
     line-height: 50px;
@@ -227,12 +232,9 @@ nav li:hover{
     background-color: rgb(13,176,95);
     cursor: pointer;
 }
-nav{
-    background-color: rgb(244, 152, 0);
-}
 ul{
-    margin: 0 0;
-    padding: 0 0;
+    margin: 0;
+    padding: 0;
 }
 /*banner轮轮轮轮轮轮轮轮轮轮轮轮轮轮播图*/
 #banner{
@@ -240,14 +242,8 @@ ul{
     position: relative;
     background-color: rgb(238, 226, 175);
 }
-img{
-    vertical-align: top;
-}
 #container{
-    height: 500px;
-    overflow: hidden;
     position: relative;
-
 }
 #container ul{
     width: 500%;
@@ -261,9 +257,6 @@ img{
 }
 #buttons{
     position: absolute;
-    z-index: 2;
-    height: 10px;
-    width: 100px;
     bottom: 30px;
     left: 550px;
 }
@@ -272,14 +265,13 @@ img{
     height: 10px;
     float: left;
     margin-right: 20px;
-    border: solid 1px black;
+    border: solid 1px grey;
     cursor: pointer;
     border-radius: 50%;
 }
 .arrow{
     height: 200px;
     width: 100px;
-    overflow: hidden;
     background-image: url(../images/prev-next.png);
     position: absolute;
     cursor: pointer;
@@ -287,7 +279,6 @@ img{
 #prev{
     top: 150px;
     left: 50px;
-    background-position: 0 0;
 }
 #next{
     top: 150px;
@@ -299,11 +290,10 @@ img{
 }
 /*服服服服服服服服服服服服服服务项目*/
 #item{
+    height: 871px;
     background: radial-gradient(circle,rgb(101, 112, 122),rgb(20, 36, 52));
-    background-color: rgb(20, 36, 52);
 }
 #item .inner{
-    height: 871px;
     text-align: center;
     position: relative;
 }
@@ -386,7 +376,7 @@ img{
 }
 #bulb-bottom{
     position: relative;
-    top: 130px;
+    top: 112px;
 }
 #bulb-bottom div:first-child{
     width: 150px;
@@ -394,7 +384,6 @@ img{
     background-color: rgb(244, 152, 0);
     border-radius: 8px;
     margin: 0 auto;
-    margin-top: -18px;
 }
 #bulb-bottom div:first-child + div{
     width: 100px;
@@ -413,7 +402,6 @@ img{
     margin-top: 5px;
 }
 #itemMore{
-    width: 150px;
     position: absolute;
     bottom: 59px;
     right: 140px;
@@ -454,7 +442,6 @@ img{
     color: black;
 }
 .boxx{
-    height: 220px;
     text-align: center;
 }
 .function{
@@ -464,13 +451,11 @@ img{
     margin: 10px;
     background-image: url(../images/4.png);
     background-repeat: no-repeat;
-    background-size: 350%;
     border-radius: 5px;
 }
 
 #build .inner >p{
     font-size: 24px;
-
     margin: 50px 0 40px 0;
 }
 #build .title +p{
@@ -516,10 +501,10 @@ img{
 /*全全全全全全全全全全全全全全全全网营销*/
 #market{
     background-color: rgb(20, 36, 52);
+    height: 456px;
 }
 #market .inner{
     text-align: center;
-    height: 456px;
 }
 #market .inner p{
     color: white;
@@ -535,16 +520,16 @@ img{
     background-image: url(../images/5.png);
     background-repeat: no-repeat;
 }
-#content{
+#marketContent{
     margin-top: 40px;
+    font-size: 0;
 }
-#content div{
+#marketContent div{
     display: inline-block;
 }
 .line{
     width: 140px;
     height: 3px;
-    margin: 0 -5px;
     background-color: rgb(0,246,247);
     position: relative;
     top: -115px;
@@ -563,11 +548,10 @@ img{
 }
 /*网网网网网网网网网网网网网网站优化*/
 #optimize{
+    height: 456px;
     background-color: rgb(209,56,100);
 }
-#optimize .inner{
-    height: 456px;
-}
+
 #optimize h1{
     color: white;
     font-size: 36px;
@@ -586,14 +570,13 @@ img{
 }
 #adv1{
     background-image: url(../images/adv1.jpg);
-    margin-right: 10px;
+    margin-right: 20px;
 }
 #adv2{
     background-image: url(../images/adv2.jpg);
-    margin-left: 10px;
 }
 .adv div{
-    width: 526px;
+    width: 100%;
     height: 50px;
     line-height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -621,6 +604,7 @@ p>span{
 /*品品品品品品品品品品品品品品牌推广*/
 #promotion{
     position: relative;
+    height: 730px;
 }
 #promotion h1{
     padding-left: 62px;
@@ -639,7 +623,6 @@ p>span{
     top: 0;
     left: 0;
     right: 0;
-    height: 730px;
 }
 #push{  
     overflow: hidden;/*让父元素包含浮动的子元素*/
@@ -649,10 +632,9 @@ p>span{
     height: 450px;
     width: 350px;
     float: left;
-    margin: 10px;
+    margin: 0 10px 0 0;
     border: solid 1px rgb(8,144,216);
     border-radius: 8px;
-    margin-top: 0px;
     text-align: center;
     overflow: hidden;
 }
@@ -709,8 +691,10 @@ p>span{
 #feature h1{
     color: black;
 }
-div.showBlack{
+#corporateImage > div{
     height: 242px;
+}
+div.showBlack{
     width: 225px;
     overflow: hidden;
     margin: 15px 10px;
@@ -754,7 +738,6 @@ div.showBlack:hover{
 }
 div#kingTrain{
     width: 405px;
-    height: 242px;
     margin: 15px 10px;
     padding-left:20px;
     display: inline-block;
@@ -882,17 +865,16 @@ div#kingTrain{
 }
 /*企企企企企企企企企企企企业案例*/
 #case{
+    height: 500px;
     background-color: rgb(19,35,51);
     position: relative;
 }
 #case .inner{
-    height: 500px;
     text-align: center;
 }
 #case .title{
     color: white;
     top: -4px;
-    cursor: pointer;
 }
 #caseContent{
     position: relative;
@@ -906,7 +888,6 @@ div#kingTrain{
     border: solid 3px rgb(153,153,153);
     border-radius: 50%;
     margin: 15px 17.5px;
-    background-image: url(../images/1.jpg);
 }
 #caseMask{
     height: 1234px;
@@ -1007,6 +988,19 @@ div#kingTrain{
 #menu .title h1{
     color: black;
 }
+#tableTitle{
+    width: 1000px;
+    height: 90px;
+    line-height: 90px;
+    background-color: rgb(244,152,0);
+    font-size: 24px;
+    border-radius:8px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.52);
+    display: inline-block;
+}
+#tableTitle p{
+    margin: 0;
+}
 #menuContent table{
     display: block;
     height: 810px;
@@ -1015,24 +1009,10 @@ div#kingTrain{
     background-color: rgb(220,220,220);
     border-collapse: collapse;
     position: relative;
-    top: 5px;
     border: 1px solid rgb(46,182,109);
     border-radius: 8px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.52);
-    margin-top: -5px;
     overflow: hidden;
-}
-#tableTitle{
-    height: 90px;
-    width: 1000px;
-    background-color: rgb(244,152,0);
-    font-size: 24px;
-    border-radius:8px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.52);
-    display: inline-block;
-}
-#tableTitle p{
-    margin-top: 29.5px;
 }
 table tr th,table tr td{
     border-right: solid 2px white;
@@ -1054,18 +1034,13 @@ tr td{
 }
 tr td:first-child{
     font-size: 18px;
+    padding-bottom: 4.5px;
 }
 tr td:first-child + td{
     padding-left: 27px;
 }
 tr td:last-child{
     padding-left: 29px;
-}
-table tr:first-child{
-    height: 65px;
-}
-tr td:first-child{
-    padding-bottom: 4.5px;
 }
 .menuChoose{
     height: 24px;
@@ -1074,9 +1049,6 @@ tr td:first-child{
     display: inline-block;
     margin: 0 14px 0 32px;
     vertical-align: bottom;
-    position: relative;
-    bottom: 0;
-    left: 0;
     cursor: pointer;
 }
 .gou{
@@ -1087,7 +1059,7 @@ tr td:first-child{
     bottom: 7px;
     opacity: 0;
 }
-table + button{
+#button_1{
     width: 150px;
     height: 50px;
     background-color: rgb(244,152,0);
@@ -1097,6 +1069,10 @@ table + button{
     color: white;
     font-size: 18px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.71);
+    cursor: pointer;
+}
+#button_1:hover{
+    background-color:  rgb(43,181,110);
 }
 /*脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚脚*/
 #foot{

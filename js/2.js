@@ -1,13 +1,31 @@
-//轮播图
+//封装获取元素的方法
+function getId(id){
+    return typeof(id) === "string"?document.getElementById(id):id;  
+}
 
 window.onload = function(){
-    var list = document.getElementById("ul");
-    var prev = document.getElementById("prev");
-    var next = document.getElementById("next");
-    var buttons = document.getElementById("buttons").getElementsByTagName("span");
+    //ajax请求
+    $.ajax({
+        url        : "http://vtmer.cn/class",    //请求的url地址
+        dataType   : "json",   //返回格式为json
+        async      : true, //请求是否异步，默认为异步，这也是ajax重要特性
+        data       : {},    //参数值
+        type       : "GET",   //请求方式
+        success: function(req) {
+            //请求成功时处理
+            console.log(req);
+            randomData(req);
+        }
+    });
+
+    //轮播图
+    var list = getId("ul");
+    var prev = getId("prev");
+    var next = getId("next");
+    var buttons = getId("buttons").getElementsByTagName("span");
     var index = 1;
     var timer;  
-    var banner = document.getElementById("banner");
+    var banner = getId("banner");
     //算移动距离
     function animate(offset){
         var newLeft = parseInt(list.style.left) + offset;
@@ -75,7 +93,7 @@ window.onload = function(){
     play();
 
     //画圆弧
-    var c=document.getElementById("myCanvas");
+    var c=getId("myCanvas");
     var cxt=c.getContext("2d");
 
     cxt.beginPath();
@@ -118,14 +136,8 @@ window.onload = function(){
     getId("button_1").onclick = put;
 }
 
-//封装获取元素的方法
-function getId(id){
-    return typeof(id) === "string"?document.getElementById(id):id;  
-}
-
 
 //登录
-
 //弹出登录框
 function loginOpen(){
     getId("mask").style.display = "block";
@@ -137,7 +149,7 @@ function loginClose(){
     getId("login").style.display = "none";
     return false;
 }
-
+//登录
 function login(){
     //先关了登录框
     loginClose();
@@ -168,4 +180,25 @@ function openOneCase(){
 function closeOneCase(){
     getId("caseMask").style.display = "none";
     getId("oneCase").style.display = "none";
+}
+
+function randomData(req){
+    var myList = document.getElementsByClassName("companyCase");
+
+    for(var i=0; i<myList.length;i++){
+        myList[i].style.backgroundImage = "url(\"" + req.item[i].img + ";";
+    }
+
+    for(var i = 0;i<myList.length;i++){
+        (function(i){
+            myList[i].onclick = function(){
+                openOneCase();
+                getId("companyName").innerHTML = req.item[i].name;
+                getId("oneCaseTitle").innerHTML = req.item[i].title;
+                getId("caseImg").style.backgroundImage = "url(\"" + req.item[i].img + ";";
+                getId("caseBlaBla").innerHTML = req.item[i].intro;
+                getId("getMore").setAttribute("href",req.item[i].url);
+            }
+        })(i)
+    }    
 }

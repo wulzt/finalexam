@@ -169,7 +169,7 @@
                 <p>多渠道推广、精准投放，一网打尽！</p>
             </div>
             <p>文案策划</p>
-            <div id="content">
+            <div id="marketContent">
                 <div>
                     <div class="circle-border" id="circle-border_1"></div>
                     <p>文案撰写</p>
@@ -516,38 +516,6 @@
                 'intro': '@paragraph(5,8)',
                 'url': '@url()',      //企业链接
             }]
-        });
-
-        //ajax请求
-        $("#case .title").click(function(){
-            $.ajax({
-                url        : "http://vtmer.cn/class",    //请求的url地址
-                dataType   : "json",   //返回格式为json
-                async      : true, //请求是否异步，默认为异步，这也是ajax重要特性
-                data       : {},    //参数值
-                type       : "GET",   //请求方式
-                success: function(req) {
-                    //请求成功时处理
-                    console.log(req);
-                    var myList = document.getElementsByClassName("companyCase");
-                    for(var i=0; i<myList.length;i++){
-                         myList[i].style.backgroundImage = "url(\"" + req.item[i].img + ";";
-                     }
-                    for(var i = 0;i<myList.length;i++){
-                        (function(i){
-                            myList[i].onclick = function(){
-                                openOneCase();
-                                getId("companyName").innerHTML = req.item[i].name;
-                                getId("oneCaseTitle").innerHTML = req.item[i].title;
-                                getId("caseImg").style.backgroundImage = "url(\"" + req.item[i].img + ";";
-                                getId("caseBlaBla").innerHTML = req.item[i].intro;
-                                getId("getMore").setAttribute("href",req.item[i].url);
-                            }
-                        })(i)
-                    }
-                }
-            
-            });
         });
     </script>
 </body>
