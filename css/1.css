@@ -793,6 +793,7 @@ div#kingTrain{
     margin-bottom: 0;
 }
 .showYellow{
+    background-color: rgb(238,193,124);
     background:-webkit-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
     background:-moz-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
     background:-o-linear-gradient(right,rgb(224,224,224),rgb(255,160,3));
@@ -800,6 +801,7 @@ div#kingTrain{
     height: 300px;
 }
 .showGreen{
+    background-color: rgb(119,199,158);
     background:-webkit-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
     background:-moz-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
     background:-o-linear-gradient(left,rgb(224,224,224),rgb(46,182,109));
@@ -937,8 +939,13 @@ div#kingTrain{
 }
 #oneCaseContent{
     margin-top: 100px;
+    text-align: center;
 }
-#oneCaseContent > div{
+#oneCaseInner{
+    width: 1400px;
+    margin: 0 auto;
+}
+#oneCaseInner > div{
     display: inline-block;
     height: 1000px;
     overflow: hidden;
