@@ -1,6 +1,7 @@
 body{
     margin: 0 0;
     padding: 0 0;
+    min-width: 1200px;
     font-family: "Microsoft YaHei";
 }
 a{
@@ -918,6 +919,7 @@ div#kingTrain{
     top: 77px;
     right: 48px;
     cursor: pointer;
+    z-index: 999;
 }
 #oneCaseTitle{
     font-size: 60px;
@@ -942,12 +944,15 @@ div#kingTrain{
     text-align: center;
 }
 #oneCaseInner{
-    width: 1400px;
+    width: 1300px;
     margin: 0 auto;
+}
+#oneCaseInner>div:first-child{
+    width: 440px;
+    height: 1000px;
 }
 #oneCaseInner > div{
     display: inline-block;
-    height: 1000px;
     overflow: hidden;
 }
 #caseImg{
@@ -959,14 +964,15 @@ div#kingTrain{
     font-size: 60px;
     margin-top: 80px;
 }
-#caseIntro{
-    width: 800px;
+#oneCaseInner #caseIntro{
+    width: 755px;
+    height: 950px;
     font-size: 30px;
     color: white;
     text-align: left;
-    padding-left: 113px;
+    padding-left: 100px;
     line-height: 52px;
-    position: relative;
+    vertical-align: top;
 }
 #caseIntro p:first-child{
     line-height: 52px;
@@ -977,12 +983,12 @@ div#kingTrain{
     margin: 0;
     text-indent: 2em;
 }
-#caseIntro a{
+#oneCaseInner a{
     font-size: 24px;
     color: rgb(254,162,9);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 5px;
+    right: 50px;
 }
 /*服服服服服服服服服服服服务套餐*/
 #menu .inner{
