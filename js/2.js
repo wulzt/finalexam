@@ -37,7 +37,18 @@ window.onload = function(){
             list.style.left = -3600 + "px";
         }
     }
-    
+
+    //定时器 2.5s循环播放
+    function play(){
+        timer = setInterval(function(){
+            next.onclick()
+        },2500)
+    }
+    //清除定时器
+    function stop(){
+        clearInterval(timer);
+    }    
+
     function buttonsShow(){
         //清除on
         for(var i = 0;i < buttons.length;i++){
@@ -64,13 +75,6 @@ window.onload = function(){
         buttonsShow();
         animate(-1200);
     }
-    //定时器 2.5s循环播放
-    function play(){
-        timer = setInterval(function(){
-            next.onclick()
-        },2500)
-    }
-
 
     for(var i = 0;i<buttons.length;i++){
         (function(i){
@@ -84,9 +88,6 @@ window.onload = function(){
         })(i)
     }
 
-    function stop(){
-        clearInterval(timer);
-    }
     banner.onmouseover = stop;
     banner.onmouseout = play;
 
